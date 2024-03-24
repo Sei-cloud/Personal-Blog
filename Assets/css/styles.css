@@ -1,0 +1,41 @@
+body {
+    display: block;
+    margin: 0px;
+  }
+header {
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    
+}
+
+header #emoji {
+   font-size: 20px;
+}
+
+#theme-btn {
+    background-color: #faf0e6;
+    padding: 0;
+    margin: 2% 2% 2%;
+    font-size: 40px;
+}
+
+.dark {
+    background-color:#243447;
+    color: #bebebe;
+    height: 100vh;
+   
+  }
+
+  /* Dark Mode */
+
+  
+  /* Light Mode */
+  .light {
+    background-color: #f0ead6;
+    color: black;
+    height: 100vh;
+    
+  }
