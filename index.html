@@ -11,8 +11,9 @@
 
 <body>
     <div class="container dark">
-        <header id="header">
-            <button id="theme-btn">☀️</button>
+        <header class="mode-switch">
+            <span class="sun" style="display: none;">🌞</span> 
+            <span class="moon">🌛</span> 
         </header>
         <div class="blog">
             <div class="logo">
@@ -33,10 +34,10 @@
                 <div class="content">
                     <label for="content">Content</label>
                     <textarea id="content" name="content" required></textarea>
-                </div>
+                
                 <button type="submit">Submit</button>
             </form>
-
+            </div>
         </div>
     </div>
     <script src="Assets/js/logic.js"></script>

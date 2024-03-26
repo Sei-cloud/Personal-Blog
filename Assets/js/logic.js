@@ -1,43 +1,31 @@
-// Access toggle switch HTML element
-const themeSwitcher = document.querySelector('#theme-btn');
+// Dark mode switch
+const themeSwitcher = document.querySelector('.mode-switch');
 const container = document.querySelector('.container');
+const sun = document.querySelector('.sun');
+const moon = document.querySelector('.moon');
 
-// Set default mode to dark
-let mode = 'dark';
+// Check if mode is saved in local storage
+let mode = localStorage.getItem('mode') || 'dark'; // Default to dark if not found
 
-// Listen for a click event on toggle switch
-themeSwitcher.addEventListener('click', function () {
-  // If mode is dark, apply light background
+// Apply the initial mode
+applyMode(mode);
+
+// Function to apply mode
+function applyMode(mode) {
   if (mode === 'dark') {
-    mode = 'light';
+    moon.style.display = 'inline';
+    sun.style.display = 'none';
+    container.setAttribute('class', 'dark');
+  } else {
+    moon.style.display = 'none';
+    sun.style.display = 'inline';
     container.setAttribute('class', 'light');
   }
-  // If mode is light, apply dark background
-  else {
-    mode = 'dark';
-    container.setAttribute('class', 'dark');
-  }
+}
+
+// A click event on toggle switch
+themeSwitcher.addEventListener('click', function () {
+  mode = mode === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('mode', mode);
+  applyMode(mode);
 });
-
-// Function to retrieve URL parameters
-function getUrlParams() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return {
-        username: urlParams.get('username'),
-        title: urlParams.get('title'),
-        content: urlParams.get('content')
-    };
-}
-
-// Function to populate blog content
-function populateBlogContent() {
-    const params = getUrlParams();
-    document.getElementById('username').innerText = params.username;
-    document.getElementById('title').innerText = params.title;
-    document.getElementById('content').innerText = params.content;
-}
-
-// Call populateBlogContent when the page loads
-window.onload = populateBlogContent;
-
-

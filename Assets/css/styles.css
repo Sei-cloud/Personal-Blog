@@ -1,41 +1,37 @@
 body {
-    display: block;
-    margin: 0px;
-  }
+  display: block;
+  margin: 0px;
+}
+
 header {
-    display: flex;
-    justify-content: right;
-    font-size: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    
+  display: flex;
+  justify-content: right;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
 }
 
-header #emoji {
-   font-size: 20px;
+
+.mode-switch {
+  padding: 0;
+  margin: 0 2em 0 2em;
+  font-size: 40px;
 }
 
-#theme-btn {
-    background-color: #faf0e6;
-    padding: 0;
-    margin: 2% 2% 2%;
-    font-size: 40px;
+.mode-switch:hover {
+  cursor: pointer;
 }
 
 .dark {
-    background-color:#243447;
-    color: #bebebe;
-    height: 100vh;
-   
-  }
+  background-color: #243447;
+  color: #f0ead6;
+  height: 100vh;
 
-  /* Dark Mode */
+}
 
-  
-  /* Light Mode */
-  .light {
-    background-color: #f0ead6;
-    color: black;
-    height: 100vh;
-    
-  }
+.light {
+  background-color: #f0ead6;
+  color: black;
+  height: 100vh;
+
+}

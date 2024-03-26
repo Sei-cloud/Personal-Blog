@@ -3,36 +3,34 @@
     flex-direction: row;
     text-align: center;
     width: 90%;
-    margin: 10% auto;
+    margin: 7% auto;
     justify-content: center;
     
 
 }
 
 form {
-    flex-grow: 1;
     margin-left: 50px;
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 10px;
+    margin: 0 2em 0 2em;
 }
 
 .logo {
     display: flex;
     background-color: #F4BB44;
     color: #fff;
-    font-size: 30px;
-    padding: 10%;
+    padding: 15%;
     border-radius: 50%;
     text-align: center;
-    aspect-ratio: 1/1;
 }
 
 
 label {
     display: block;
     font-size: 20px;
-    margin-bottom: 15px;
+    margin: 15px;
     
 }
 
@@ -42,12 +40,11 @@ textarea {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: vertical; 
+
 }
 
 input[type="text"] {
     width: calc(100% - 22px);
-    /* Adjusted width to account for padding */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -78,12 +75,11 @@ button:hover {
 
     form {
         width: 50%;
-        margin: 0;
-        margin-left: 20px;
     }
 
     .logo {
         margin: auto;
         aspect-ratio: 1/1;
+        font-size: 20px;
     }
 }

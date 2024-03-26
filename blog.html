@@ -11,19 +11,18 @@
 
 <body>
     <div class="container dark">
-        <header id="header">
-            <button id="theme-btn">☀️</button>
+        <header class="mode-switch" onclick="toggleMode()">
+            <span class="sun" style="display: none;">🌞</span> <!-- Sun emoji -->
+            <span class="moon">🌛</span> <!-- Moon emoji -->
         </header>
-        <h1>Blog Post</h1>
-        <div id="blogContent">
-            <p><strong>Username:</strong> <span id="username"></span></p>
-            <h2 id="title"></h2>
-            <p id="content"></p>
+        <h1>Blog Posts</h1>
+        <div id="blogList"></div>
         </div>
     </div>
-    <!-- Include logic.js -->
     <script src="Assets/js/logic.js"></script>
     <script src="Assets/js/blog.js"></script>
+    
+    
 
 </body>
 
