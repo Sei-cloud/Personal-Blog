@@ -9,12 +9,11 @@
 
 }
 
-form {
-    margin-left: 50px;
+#submitForm {
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 10px;
-    margin: 0 2em 0 2em;
+    margin: auto 4em;
 }
 
 .logo {

@@ -1,25 +1,55 @@
-// blog.js
-window.onload = function() {
-    loadBlogPosts();
-    console.log('hi')
-};
+// Function to retrieve existing blog posts from local storage
+function getBlogPostsFromStorage() {
+    const storedPosts = localStorage.getItem('blogPosts');
+    return storedPosts ? JSON.parse(storedPosts) : [];
+}
 
+// Function to display blog posts
+function displayBlogPosts() {
+    const blogListContainer = document.getElementById('blogList');
+    const blogPosts = getBlogPostsFromStorage();
 
-function loadBlogPosts() {
-    const savedPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-    const blogList = document.getElementById('blogList');
+    // Clear existing content
+    blogListContainer.innerHTML = '';
 
-
-    savedPosts.forEach(post => {
+    // Display each blog post
+    blogPosts.forEach((post, index) => {
         const postElement = document.createElement('div');
         postElement.classList.add('blog-post');
         postElement.innerHTML = `
             <h2>${post.title}</h2>
+            <p><strong>Author:</strong> ${post.username}</p>
             <p>${post.content}</p>
-            <p class="author">Written by: ${post.username}</p>
+            <button class="delete-button" data-index="${index}">Delete</button>
         `;
-        blogList.appendChild(postElement);
-        console.log(postElement);
+        blogListContainer.appendChild(postElement);
+    });
+
+    // Add event listener to delete buttons
+    const deleteButtons = document.querySelectorAll('.delete-button');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', handleDeleteButtonClick);
     });
 }
 
+// Function to handle delete button click
+function handleDeleteButtonClick(event) {
+    const index = event.target.dataset.index;
+    deleteBlogPost(index);
+    displayBlogPosts(); // Refresh the display after deletion
+}
+
+// Function to delete a blog post
+function deleteBlogPost(index) {
+    const blogPosts = getBlogPostsFromStorage();
+    blogPosts.splice(index, 1);
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+}
+
+// Display existing blog posts on page load
+displayBlogPosts();
+
+// Go back button
+function goBack() {
+    window.history.back();
+}
