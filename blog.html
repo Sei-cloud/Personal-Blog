@@ -9,27 +9,26 @@
     <link rel="stylesheet" href="./Assets/css/blog.css">
 </head>
 
-<body>
-    <div class="container dark">
+<body  class="container dark">
+    <div>
         <header class="mode-switch">
-            <span class="sun" style="display: none;">🌞</span> <!-- Sun emoji -->
-            <span class="moon">🌛</span> <!-- Moon emoji -->
-            <button onclick="goBack()">Back</button> <!-- Back button -->
+            <span class="sun" style="display: none;">🌞</span> 
+            <span class="moon">🌛</span>
         </header>
+            <button onclick="goBack()" id="backBtn">Back</button> 
         <div id="submitForm">
         <h1>Blog Posts</h1>
         <div id="blogList"></div>
         </div>
+        <footer>
+            <a href="https://sei-cloud.github.io/Portfolio/">
+                <p><strong>Portfolio: </strong>Sei</p></a>
+            <p><strong>Blog: </strong>Demo-Blog</p>
+            <p><strong>Emal: </strong>sei@icloud.com</p>
+        </footer>
     </div>
-</div>
     <script src="Assets/js/logic.js"></script>
     <script src="Assets/js/blog.js"></script>
-    
-    <script>
-        // Function to navigate back to the index page
-        
-    </script>
-
 </body>
 
 </html>

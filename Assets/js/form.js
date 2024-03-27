@@ -30,3 +30,15 @@ function handleFormSubmission(event) {
 // Event listener for form submission
 const submitForm = document.getElementById('submitForm');
 submitForm.addEventListener('submit', handleFormSubmission);
+
+// Clear form textfields
+window.onload = function() {
+    // Clear text fields on page load
+    clearTextFields();
+};
+
+function clearTextFields() {
+    document.getElementById('username').value = '';
+    document.getElementById('title').value = '';
+    document.getElementById('content').value = '';
+}
