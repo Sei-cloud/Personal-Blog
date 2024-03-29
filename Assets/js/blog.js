@@ -51,5 +51,5 @@ displayBlogPosts();
 
 // Go back button
 function goBack() {
-    window.history.back();
+    location.replace('./index.html');
 }

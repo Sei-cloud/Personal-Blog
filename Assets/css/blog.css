@@ -1,10 +1,13 @@
+/* Center title */
 h1 {
     text-align: center;
 }
+/* Sizing form */
 #submitForm {
-    margin: 0 1em;
-    
+    margin: 0 2em;  
 }
+
+/* Styling and positioning delete button */
 .delete-button {
     padding: 2px 10px 2px 10px;
     background-color: #007bff;
@@ -19,6 +22,7 @@ h1 {
     background-color: #0056b3;
 }
 
+/* Styling and positioning back button */
 #backBtn {
     position: absolute;
     right: 7em; 
@@ -35,6 +39,7 @@ h1 {
     background-color: #0056b3;
 }
 
+/* Styling blog contents */
 #blogList {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -47,13 +52,14 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Styling footer */
 footer a{
     text-decoration: none;
     color: #656460;
 }
 
 footer {
-    margin-left: 1em;
+    margin: 3em 0 0 2em;
 }
 
 
