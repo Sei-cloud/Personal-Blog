@@ -2,7 +2,7 @@
 * As a Developer, I made a blog page that shows the contents.
 * As a Developer, I made light and dark mode switcher.
 * As a Developer, I made sure contents stay after a page refresh.
-* As a Developer, I made footer with a link to my portfolio.
+* As a Developer, I made a footer with a link to my portfolio.
 * As a Developer, I made a back button on the blog page.
 
 ![Personal-Blog](./Assets/Images/login%20page.png)
